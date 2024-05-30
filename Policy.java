@@ -74,7 +74,7 @@ public class Policy
    {
       return policyNum;
    }
-   public String getPolicyName()
+   public String getProviderName()
    {
       return providerName;
    }
