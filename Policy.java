@@ -23,10 +23,10 @@ public class Policy
       holderWeight = 0;
    }   
    
-   public void argPolicy(int polNum,String polName,String holdFirst,String holdLast,byte holdAge,String smokeStatus,double holdHeight,double holdWeight)
+   public void argPolicy(byte polNum,String provName,String holdFirst,String holdLast,byte holdAge,String smokeStatus,double holdHeight,double holdWeight)
    { //Constructor with arguments
       policyNum = polNum;
-      providerName = polName;
+      providerName = provName;
       holderFirst = holdFirst;
       holderLast = holdLast;
       holderAge = holdAge;
