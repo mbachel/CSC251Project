@@ -2,7 +2,7 @@ public class Policy
 {
    //Variable Declarations
    private int policyNum;
-   private String policyName;
+   private String providerName;
    private String holderFirst;
    private String holderLast;
    private byte holderAge;
@@ -14,7 +14,7 @@ public class Policy
    public void noArgPolicy()
    { //No-arg constructor
       policyNum = 0;
-      policyName = "";
+      providerName = "";
       holderFirst = "";
       holderLast = "";
       holderAge = 0;
@@ -26,7 +26,7 @@ public class Policy
    public void argPolicy(int polNum,String polName,String holdFirst,String holdLast,byte holdAge,String smokeStatus,double holdHeight,double holdWeight)
    { //Constructor with arguments
       policyNum = polNum;
-      policyName = polName;
+      providerName = polName;
       holderFirst = holdFirst;
       holderLast = holdLast;
       holderAge = holdAge;
@@ -40,9 +40,9 @@ public class Policy
    {
       policyNum = polNum;
    }
-   public void setPolicyName(String polName)
+   public void setProviderName(String polName)
    {
-      policyName = polName;
+      providerName = polName;
    }
    public void setHolderFirst(String holdFirst)
    {
@@ -76,7 +76,7 @@ public class Policy
    }
    public String getPolicyName()
    {
-      return policyName;
+      return providerName;
    }
    public String getHolderFirst()
    {
