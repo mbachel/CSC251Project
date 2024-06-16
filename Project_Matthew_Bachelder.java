@@ -55,6 +55,8 @@ public class Project_Matthew_Bachelder
       }//end while loop
       
       //output
+      int smokers = 0;
+      int nonsmokers = 0;
       for(int index = 0; index < list.size(); index ++)
       {
          Policy policy = list.get(index);
@@ -69,6 +71,16 @@ public class Project_Matthew_Bachelder
          System.out.printf("Policyholder's BMI: %.2f \n", policy.calculateBMI());
          System.out.printf("Policy Price: $%.2f \n", policy.calculatePrice());
          System.out.println("");
+         if (policy.getSmokeStatus().equals("smoker"))
+         {
+            smokers ++;
+         }
+         else if (policy.getSmokeStatus().equals("non-smoker"))
+         {
+            nonsmokers ++;
+         }
       }//end for loop
+      System.out.println("The number of policies with a smoker is: " + smokers);
+      System.out.println("The number of policies with a non-smoker is: " + nonsmokers);
    }//end main method
 }//end class

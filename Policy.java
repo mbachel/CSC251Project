@@ -221,7 +221,7 @@ public class Policy
       {
          additionalFees += 75.0;
       }
-      if (holderSmokeStatus == "smoker") //if holder is a smoker, additional fee of 100.
+      if (holderSmokeStatus.equals("smoker")) //if holder is a smoker, additional fee of 100.
       {
          additionalFees += 100.0;
       }
