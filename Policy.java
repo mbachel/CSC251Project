@@ -25,7 +25,7 @@ public class Policy
    }   
    
    /**
-      The argPolicy method is a constructor method that receives arguments for an entire policy.
+      The Policy method is a constructor method that receives arguments for an entire policy.
          
       @param polNum The policy number.
       @param provName The name of the insurance provider company.
@@ -36,7 +36,7 @@ public class Policy
       @param holdHeight The policy holder's height.
       @param holdWeight The policy holder's weight.
    */
-   public void argPolicy(int polNum,String provName,String holdFirst,String holdLast,byte holdAge,String smokeStatus,double holdHeight,double holdWeight)
+   public Policy(int polNum,String provName,String holdFirst,String holdLast,byte holdAge,String smokeStatus,double holdHeight,double holdWeight)
    { 
       policyNum = polNum;
       providerName = provName;
