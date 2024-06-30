@@ -101,6 +101,6 @@ public class Policy
    {
       return String.format("Policy Number: " + policyNum +
                            "\nProvider Name: " + providerName +
-                           "\nPolicy Holder: " + holder.toString());
+                           "\n" + holder.toString());
    }  
 }//end class
