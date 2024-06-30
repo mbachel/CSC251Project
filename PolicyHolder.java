@@ -39,6 +39,19 @@ public class PolicyHolder
       holderHeight = holdHeight;
       holderWeight = holdWeight;
    }
+   /**
+      The copy constructor is used to avoid security holes.
+      @param object2 The object to copy.
+   */
+   public PolicyHolder(PolicyHolder object2)
+   {
+      holderFirst = object2.holderFirst;
+      holderLast = object2.holderLast;
+      holderAge = object2.holderAge;
+      holderSmokeStatus = object2.holderSmokeStatus;
+      holderHeight = object2.holderHeight;
+      holderWeight = object2.holderWeight;
+   }  
    
    //Mutator methods
    /**
@@ -151,20 +164,6 @@ public class PolicyHolder
    {
       return holderWeight;
    }
-   /**
-      The toString method returns a string that represents policy holder.
-      @return A string with the information of the policy holder.
-   */
-   public String toString()
-   {
-      String str = "Holder First: " + holderFirst +
-                   "\nHolder Last: " + holderLast +
-                   "\nHolder Age: " + holderAge +
-                   "\nHolder Smoking Status: " + holderSmokeStatus +
-                   "\nHolder Height: " + holderHeight +
-                   "\nHolder Weight: " + holderWeight;
-      return str;
-   }
    
    //Calculator methods
    /**
@@ -201,4 +200,19 @@ public class PolicyHolder
       }
       return baseFee + additionalFees;
    }//end calculatePrice
+   /**
+      The toString method returns a string that represents policy holder.
+      @return A string with the information of the policy holder.
+   */
+   public String toString()
+   {
+      return String.format("Holder First: " + holderFirst +
+                           "\nHolder Last: " + holderLast +
+                           "\nHolder Age: " + holderAge +
+                           "\nHolder Smoking Status: " + holderSmokeStatus +
+                           "\nHolder Height: " + holderHeight +
+                           "\nHolder Weight: " + holderWeight +
+                           "\nBMI: " + calculateBMI() +
+                           "\nPrice: " + calculatePrice());
+   }
 }//end class
