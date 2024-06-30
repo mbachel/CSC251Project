@@ -151,6 +151,20 @@ public class PolicyHolder
    {
       return holderWeight;
    }
+   /**
+      The toString method returns a string that represents policy holder.
+      @return A string with the information of the policy holder.
+   */
+   public String toString()
+   {
+      String str = "Holder First: " + holderFirst +
+                   "\nHolder Last: " + holderLast +
+                   "\nHolder Age: " + holderAge +
+                   "\nHolder Smoking Status: " + holderSmokeStatus +
+                   "\nHolder Height: " + holderHeight +
+                   "\nHolder Weight: " + holderWeight;
+      return str;
+   }
    
    //Calculator methods
    /**
