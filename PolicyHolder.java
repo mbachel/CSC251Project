@@ -206,13 +206,13 @@ public class PolicyHolder
    */
    public String toString()
    {
-      return String.format("Holder First: " + holderFirst +
-                           "\nHolder Last: " + holderLast +
-                           "\nHolder Age: " + holderAge +
-                           "\nHolder Smoking Status: " + holderSmokeStatus +
-                           "\nHolder Height: " + holderHeight +
-                           "\nHolder Weight: " + holderWeight +
-                           "\nBMI: " + calculateBMI() +
-                           "\nPrice: " + calculatePrice());
+      return String.format("Policyholder's First Name: " + holderFirst +
+                           "\nPolicyholder's Last Name: " + holderLast +
+                           "\nPolicyholder's Age: " + holderAge +
+                           "\nPolicyholder's Smoking Status: " + holderSmokeStatus +
+                           "\nPolicyholder's Height: " + holderHeight +
+                           "\nPolicyholder's Weight: " + holderWeight +
+                           "\nPolicyholder's BMI: %.2f" +
+                           "\nPolicy Price: $%.2f",calculateBMI(),calculatePrice());
    }
 }//end class
