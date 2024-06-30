@@ -3,6 +3,7 @@ public class Policy
    //Variable declarations
    private int policyNum;
    private String providerName;
+   private static int policyCount = 0;
 
    //The noArgPolicy method is a constructor method that does not receive arguments, but sets default values to a policy.
    public void noArgPolicy()
@@ -16,17 +17,12 @@ public class Policy
          
       @param polNum The policy number.
       @param provName The name of the insurance provider company.
-      @param holdFirst The policy holder's first name.
-      @param holdLast The policy holder's last name.
-      @param holdAge The policy holder's age.
-      @param smokeStatus Whether the policy holder is a smoker or non-smoker.
-      @param holdHeight The policy holder's height.
-      @param holdWeight The policy holder's weight.
    */
    public Policy(int polNum,String provName)
    { 
       policyNum = polNum;
       providerName = provName;
+      policyCount++;
    }
    
    //Mutator methods.
@@ -69,6 +65,16 @@ public class Policy
       return providerName;
    }
    /**
+      The getPolicyCount method gets the number of policies that have been created.
+      @return The amount of policies created.
+   */
+   public int getPolicyCount()
+   {
+      return policyCount;
+   }
+   
+   //Special methods
+   /**
       The toString method returns a string that represents policy.
       @return A string with the information of the policy.
    */
@@ -77,5 +83,5 @@ public class Policy
       String str = "Policy Number: " + policyNum +
                    "\nProvider Name: " + providerName;
       return str;
-   }
+   }  
 }//end class
