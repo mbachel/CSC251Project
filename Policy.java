@@ -4,6 +4,7 @@ public class Policy
    private int policyNum;
    private String providerName;
    private static int policyCount = 0;
+   private PolicyHolder holder;
 
    //The noArgPolicy method is a constructor method that does not receive arguments, but sets default values to a policy.
    public void noArgPolicy()
@@ -17,11 +18,13 @@ public class Policy
          
       @param polNum The policy number.
       @param provName The name of the insurance provider company.
+      @param holderObject The policy holder object for class collaboration.
    */
-   public Policy(int polNum,String provName)
+   public Policy(int polNum,String provName,PolicyHolder holderObject)
    { 
       policyNum = polNum;
       providerName = provName;
+      holder = new PolicyHolder(holderObject);
       policyCount++;
    }
    
@@ -43,6 +46,14 @@ public class Policy
    public void setProviderName(String provName)
    {
       providerName = provName;
+   }
+   /**
+      The setPolicyHolder method sets the policy holder object.
+      @param policyHolder The object.
+   */
+   public void setPolicyHolder(PolicyHolder policyHolder)
+   {
+      holder = new PolicyHolder(policyHolder);
    }
    
    //Accessor methods.
@@ -72,6 +83,14 @@ public class Policy
    {
       return policyCount;
    }
+   /**
+      The getPolicyHolder method gets the policy holder information.
+      @return The policy holder.
+   */
+   public PolicyHolder getPolicyHolder()
+   {
+      return new PolicyHolder(holder);
+   }
    
    //Special methods
    /**
@@ -80,8 +99,8 @@ public class Policy
    */
    public String toString()
    {
-      String str = "Policy Number: " + policyNum +
-                   "\nProvider Name: " + providerName;
-      return str;
+      return String.format("Policy Number: " + policyNum +
+                           "\nProvider Name: " + providerName +
+                           "\nPolicy Holder: " + holder.toString());
    }  
 }//end class
