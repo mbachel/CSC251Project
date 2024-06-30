@@ -68,4 +68,14 @@ public class Policy
    {
       return providerName;
    }
+   /**
+      The toString method returns a string that represents policy.
+      @return A string with the information of the policy.
+   */
+   public String toString()
+   {
+      String str = "Policy Number: " + policyNum +
+                   "\nProvider Name: " + providerName;
+      return str;
+   }
 }//end class
